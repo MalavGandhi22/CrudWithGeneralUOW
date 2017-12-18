@@ -42,6 +42,7 @@ namespace UOWGeneral
         public void Update(T entity)
         {
             _objectSet.Attach(entity);
+			entities.Entry(entity).State = EntityState.Modified;
         }
 
         public void Delete(T entity)
